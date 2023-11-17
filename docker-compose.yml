@@ -1,19 +1,14 @@
 version: "3"
 services:
-  pyinfer:
-    image: mlvillage-py:latest
-    container_name: mlvil-py
+  notebook:
+    image: footystars-ml:latest
+    container_name: footy-py
     build:
       context: ./srv
     env_file:
       - ./srv/.env
     ports:
       - 8000:8000
-      - 8080:8080
       - 8888:8888
     volumes:
-      - ./srv:/srv
-    working_dir: /srv
-    command: ["bash"]
-    stdin_open: true # docker run -i
-    tty: true # docker run -t
+      - ./srv:/home/jovyan/work
