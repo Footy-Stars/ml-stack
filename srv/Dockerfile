@@ -5,5 +5,6 @@ FROM jupyter/minimal-notebook
 RUN pip install --upgrade pip \
     web3==6.9.0 \
     python-dotenv==1.0.0
+    # INSTALL XGBOOST
     # Install production dependencies.
 #RUN pip install -r requirements.txt
