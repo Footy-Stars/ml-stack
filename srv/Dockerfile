@@ -7,4 +7,7 @@ RUN pip install --upgrade pip \
     python-dotenv==1.0.0
     # INSTALL XGBOOST
     # Install production dependencies.
-#RUN pip install -r requirements.txt
+
+WORKDIR /home/jovyan/work
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
